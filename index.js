@@ -10,8 +10,8 @@ module.exports = function (options, modified, total, next) {
     var fileData = (function(){
         var content, data;
         for (var i = 0; i < modified.length; i++) {
-            content = modified[i]._content;
             if (modified[i].url === options.to) {
+                content = modified[i]._content;
                 if (typeof content === 'object') {
                     data = content.toString();
                 }
